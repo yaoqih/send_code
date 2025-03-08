@@ -1,0 +1,178 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* 主要内容 */
+main {
+    flex: 1;
+}
+
+/* 卡片样式 */
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.card-content {
+    padding: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.instruction {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* 输入组 */
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px 0 0 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #3498db;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 0 8px 8px 0;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* 错误消息 */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+/* 结果卡片 */
+.success-icon {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 15px;
+}
+
+.invite-code {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #3498db;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 2px dashed #e0e0e0;
+    word-break: break-all;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+/* 隐藏元素 */
+.hidden {
+    display: none;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #95a5a6;
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        border-radius: 8px;
+        padding: 12px;
+    }
+} 

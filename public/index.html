@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavie AI体验码领取系统</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 预加载指纹库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>体验码领取</h1>
+            <!-- <div class="subtitle">展会专属福利</div> -->
+        </header>
+        
+        <main>
+            <div class="card" id="input-card">
+                <div class="card-content">
+                    <h2>请输入验证码</h2>
+                    <p class="instruction">请向工作人员索取当前有效的验证码</p>
+                    
+                    <div class="input-group">
+                        <input type="text" id="verification-input" placeholder="请输入6位数字验证码" maxlength="6" pattern="[0-9]*" inputmode="numeric">
+                        <button id="submit-btn">提交</button>
+                    </div>
+                    
+                    <div class="error-message" id="error-message"></div>
+                </div>
+            </div>
+            
+            <div class="card hidden" id="result-card">
+                <div class="card-content">
+                    <div class="success-icon">✓</div>
+                    <h2>领取成功！</h2>
+                    <p>您的专属体验码是：</p>
+                    <div class="invite-code" id="invite-code"></div>
+                    <p class="note">请妥善保管此体验码，每个设备仅能领取一次</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 Lavie AI</p>
+        </footer>
+    </div>
+    
+    <!-- 确保指纹库加载 -->
+    <script>
+        // 检查指纹库是否加载成功
+        window.onload = function() {
+            if (typeof FingerprintJS === 'undefined') {
+                console.error('指纹库加载失败，尝试重新加载');
+                // 尝试重新加载库
+                const script = document.createElement('script');
+                script.src = 'https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js';
+                script.async = true;
+                document.body.appendChild(script);
+            } else {
+                console.log('指纹库加载成功');
+            }
+        };
+    </script>
+    
+    <!-- 加载主脚本 -->
+    <script src="/js/script.js"></script>
+</body>
+</html> 

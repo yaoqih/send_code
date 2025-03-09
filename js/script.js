@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    // 添加服务器URL配置
+    const SERVER_URL = window.location.origin; // 自动获取当前服务器地址
+    
     const inputCard = document.getElementById('input-card');
     const resultCard = document.getElementById('result-card');
     const verificationInput = document.getElementById('verification-input');
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         errorMessage.textContent = '';
         
         try {
-            const response = await fetch('/api/verify', {
+            const response = await fetch(`${SERVER_URL}/api/verify`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

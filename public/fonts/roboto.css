@@ -1,0 +1,21 @@
+/* 使用系统字体替代Roboto */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PingFang SC'), local('Microsoft YaHei'), local('SimHei');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('PingFang SC'), local('Microsoft YaHei'), local('SimHei');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('PingFang SC Bold'), local('Microsoft YaHei Bold'), local('SimHei');
+}

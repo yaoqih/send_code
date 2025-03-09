@@ -1,3 +1,6 @@
+// 添加服务器URL配置
+const SERVER_URL = window.location.origin; // 自动获取当前服务器地址
+
 document.addEventListener('DOMContentLoaded', () => {
     const codeElement = document.getElementById('verification-code');
     const timeProgressElement = document.getElementById('time-progress');
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 获取当前验证码
     async function fetchVerificationCode() {
         try {
-            const response = await fetch('/api/admin/code');
+            const response = await fetch(`${SERVER_URL}/api/admin/code`);
             const data = await response.json();
             
             codeElement.textContent = data.code;
@@ -52,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 获取统计数据
     async function fetchStats() {
         try {
-            const response = await fetch('/api/admin/stats');
+            const response = await fetch(`${SERVER_URL}/api/admin/stats`);
             const data = await response.json();
             
             remainingCodesElement.textContent = data.remaining;
